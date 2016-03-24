@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<meta charset="utf-8">
+<head><title>Music cognition survey</title>
+<link href='survey.css' rel='stylesheet' type='text/css'>
+<script src="survey.js"></script>
+</head>
+<body>
+<header>
+<h1>Which of these melodies do you prefer?</h1>
+<p>Pair <span id="pairno">0</span>/15
+</header>
+<div class="container">
+<div class="outside"></div><div class="column c1">
+<p>Melody 1
+<p class="playing">Playing&hellip;
+<p><button onclick="listen(1)">Listen</button>
+<p><button onclick="prefer(1)">I prefer this one</button>
+</div>
+<div class="column c2">
+<p>Melody 2
+<p class="playing">Playing&hellip;
+<p><button onclick="listen(2)">Listen</button>
+<p><button onclick="prefer(2)">I prefer this one</button>
+</div><div class="outside"></div>
+</div>
+<script>newChoices();</script>
+</body>
+</html>

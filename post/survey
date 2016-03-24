@@ -1,0 +1,14 @@
+#!/usr/bin/python2.7
+import cgi
+import cgitb
+cgitb.enable()
+
+print("")
+
+from pymongo import MongoClient
+
+form = cgi.FieldStorage()
+
+user, prefer, over, cond = form.file.read().split(',')
+
+MongoClient().musicstudy.prefer.insert_one({'user': user, 'prefer': prefer, 'over': over, 'cond': cond})

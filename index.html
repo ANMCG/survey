@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+<meta charset="utf-8">
+<head><title>Music cognition survey</title>
+<link href='survey.css' rel='stylesheet' type='text/css'>
+<script src="survey.js"></script>
+</head>
+<body>
+<h1>Welcome to our survey</h1>
+<p>Please select your nationality.
+<form action="/post/nationality" method=POST>
+<input id="usernameinput" type="hidden" name="username">
+<script>document.getElementById("usernameinput").value = userName;</script>
+<select name="nationality">
+<option>Netherlands
+<option>Belgium
+</select>
+<input type=submit onclick="newName();" value="Start survey!"></form>
+</body>
+</html>

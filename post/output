@@ -1,0 +1,11 @@
+#!/usr/bin/python2.7
+import cgi
+import cgitb
+cgitb.enable()
+
+print("")
+
+from pymongo import MongoClient
+
+print(list(MongoClient().musicstudy.prefer.find()))
+
