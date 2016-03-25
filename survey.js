@@ -86,11 +86,6 @@ function newChoices()
 		location.pathname = "/thanks.html";
 		return;
 	}
-	if (pairno > 1) {
-		var s = document.getElementsByClassName("container")[0].style;
-		s.animationName = '';
-		s.animationName = 'nextQuestion';
-	}
 
 	disableButtons();
 	cond = cond_order[pairno];
@@ -98,6 +93,7 @@ function newChoices()
 	choice1 = melodies_order[getModeName(1)].pop();
 	choice2 = melodies_order[getModeName(2)].pop();
 	document.getElementById("pairno").textContent = ++pairno;
+	document.querySelector(".progress > span").style.width = (pairno / 15 * 100) + "%";
 	document.getElementsByTagName("h2")[0].textContent = "Next pair comes in 3 seconds...";
 	setTimeout(function() {
 		document.getElementsByTagName("h2")[0].textContent = "Next pair comes in 2 seconds...";
