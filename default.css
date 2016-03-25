@@ -415,6 +415,7 @@ ul.contact li a.icon-rss:before
 
 .prefer:disabled {
 	background: #CDC7BB;
+	visibility: hidden;
 }
 
 .prefer:hover:not(:disabled),

@@ -65,8 +65,8 @@ Released   : 20131202
 				<span class="byline"></span> 
 			</div>
 
-				<p>You will compare pairs of melodies. For each pair, you have to indicate which 
-					one you <b>prefer</b>, and which one sounds most <b>natural</b> to you. After you have given your 
+				<p>You will compare pairs of melodies. For each pair, we ask you to indicate which 
+					one you <b>prefer</b> After you have given your 
 					preferences, the next pair of melodies will be played. If, for some reason, you did not hear 
 					the melodies correctly, you can press "play buttons" to listen to them again. However, you do not 
 					have to listen to melodies multiple times. Just go for your gut feelings when evaluating 
@@ -84,7 +84,7 @@ Released   : 20131202
 							<p>Please select your <b>country</b>;</p>
 							<input id="usernameinput" type="hidden" name="username"></input>
 							<script>document.getElementById("usernameinput").value = userName;</script>
-							<select name="nationality">
+							<select required name="nationality">
 								<option>Netherlands
 								<option>Belgium
 								<option>Germany
@@ -103,10 +103,10 @@ Released   : 20131202
 							</select>
 							<br>
 							<p>Please select your <b>age</b>;</p>
-							<input type="text" name="age">
+							<input required type="text" name="age">
 							<br>
 							<p>Please select your <b>gender</b>;</p>
-							<select name="gender">
+							<select required name="gender">
 								<option>Female
 								<option>Male
 								<option>Other
@@ -114,7 +114,7 @@ Released   : 20131202
 							<br>
 							<p>How many years of <b>musical training</b> do you have?</p>
 
-							<input  type="text"  name="musicaltraining">
+							<input required type="text"  name="musicaltraining">
 				<br><br>
 				<h1>If you are ready!</h1>
 				<input type="submit" class="start" value="Start The Survey">
