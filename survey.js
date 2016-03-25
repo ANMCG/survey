@@ -125,7 +125,7 @@ var disableButtons = function()
 };
 
 function listen(argument, callback) {
-	var snd = new Audio(getSampleName(argument) + '.wav');
+	var snd = new Audio(getSampleName(argument) + '.mp3');
 	snd.play();
 	var playingFlag = document.querySelector(".ebox" + argument + " .playing");
 	setTimeout(function() {
