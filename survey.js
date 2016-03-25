@@ -83,21 +83,28 @@ var getModeName = function(argument) {
 function newChoices()
 {
 	if (pairno == 15) {
-		location.pathname = "/done.html";
+		location.pathname = "/thanks.html";
 		return;
 	}
-	if (pairno > 1) {
-		var s = document.getElementsByClassName("container")[0].style;
-		s.animationName = '';
-		s.animationName = 'nextQuestion';
-	}
 
+	disableButtons();
 	cond = cond_order[pairno];
 	randomLeft = randomBool();
 	choice1 = melodies_order[getModeName(1)].pop();
 	choice2 = melodies_order[getModeName(2)].pop();
 	document.getElementById("pairno").textContent = ++pairno;
-	listen(1, function() { listen(2); });
+	document.querySelector(".progress > span").style.width = (pairno / 15 * 100) + "%";
+	document.getElementsByTagName("h2")[0].textContent = "Next pair comes in 3 seconds...";
+	setTimeout(function() {
+		document.getElementsByTagName("h2")[0].textContent = "Next pair comes in 2 seconds...";
+		setTimeout(function() {
+			document.getElementsByTagName("h2")[0].textContent = "Next pair comes in 1 second...";
+			setTimeout(function() {
+				document.getElementsByTagName("h2")[0].textContent = "Listen to the melodies";
+				listen(1, function() { listen(2); });
+			}, 1000);
+		}, 1000);
+	}, 1000);
 }
 
 var getSampleName = function(argument)
@@ -129,12 +136,14 @@ function listen(argument, callback) {
 	snd.play();
 	var playingFlag = document.querySelector(".ebox" + argument + " .playing");
 	setTimeout(function() {
-		enableButtons();
 		playingFlag.style.visibility = "hidden";
 		if (callback) {
-			callback();
+			setTimeout(callback, 500);
+		} else {
+			document.getElementsByTagName("h2")[0].textContent = "Which of these melodies do you prefer?";
+			enableButtons();
 		}
-	}, 4400);
+	}, 4000);
 	disableButtons();
 	playingFlag.style.visibility = "visible";
 }
@@ -142,6 +151,11 @@ function listen(argument, callback) {
 function listenSample() {
 	var snd = new Audio('r0.mp3');
 	snd.play();
+	var button = document.getElementsByClassName("play")[0];
+	button.disabled = true;
+	setTimeout(function() {
+		button.disabled = false;
+	}, 4000);
 }
 
 function prefer(argument)
