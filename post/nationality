@@ -10,4 +10,5 @@ form = cgi.FieldStorage()
 MongoClient().musicstudy.nationality.insert_one({'user': form['username'].value, 'nationality': form['nationality'].value})
 
 print("Refresh: 0; /survey.html")
+print("Content-Type: text/plain")
 print("")

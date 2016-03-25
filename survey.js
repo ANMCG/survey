@@ -85,6 +85,12 @@ function newChoices()
 	if (pairno == 15) {
 		//TODO: DONE! redirect etc
 	}
+	if (pairno > 1) {
+		var s = document.getElementsByClassName("container")[0].style;
+		s.animationName = '';
+		s.animationName = 'nextQuestion';
+	}
+
 	cond = cond_order[pairno];
 	randomLeft = randomBool();
 	choice1 = melodies_order[getModeName(1)].pop();
@@ -143,6 +149,8 @@ function prefer(argument)
 	    }
 	};
 	request.open('POST', survey_url, true);
-	request.setRequestHeader("Content-Type", "text/plain")
-	request.send([userName, getSampleName(argument), getSampleName(3 - argument), cond].join());
+	request.setRequestHeader("Content-Type", "text/plain");
+	var x = [userName, getSampleName(argument), getSampleName(3 - argument), cond].join();
+	console.log(x);
+	request.send(x);
 }
