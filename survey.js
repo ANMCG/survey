@@ -83,7 +83,8 @@ var getModeName = function(argument) {
 function newChoices()
 {
 	if (pairno == 15) {
-		//TODO: DONE! redirect etc
+		location.pathname = "/done.html";
+		return;
 	}
 	if (pairno > 1) {
 		var s = document.getElementsByClassName("container")[0].style;
@@ -124,9 +125,9 @@ var disableButtons = function()
 };
 
 function listen(argument, callback) {
-	var snd = new Audio(getSampleName(argument) + '.mid');
+	var snd = new Audio(getSampleName(argument) + '.wav');
 	snd.play();
-	var playingFlag = document.querySelector(".c" + argument + " .playing");
+	var playingFlag = document.querySelector(".ebox" + argument + " .playing");
 	setTimeout(function() {
 		enableButtons();
 		playingFlag.style.visibility = "hidden";
