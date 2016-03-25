@@ -132,11 +132,16 @@ function listen(argument, callback) {
 		enableButtons();
 		playingFlag.style.visibility = "hidden";
 		if (callback) {
-			setTimeout(callback, 200);
+			callback();
 		}
-	}, 4000);
+	}, 4400);
 	disableButtons();
 	playingFlag.style.visibility = "visible";
+}
+
+function listenSample() {
+	var snd = new Audio('r0.mp3');
+	snd.play();
 }
 
 function prefer(argument)
