@@ -132,11 +132,16 @@ function listen(argument, callback) {
 		enableButtons();
 		playingFlag.style.visibility = "hidden";
 		if (callback) {
-			setTimeout(callback, 200);
+			callback();
 		}
-	}, 4000);
+	}, 4400);
 	disableButtons();
 	playingFlag.style.visibility = "visible";
+}
+
+function listenSample() {
+	var snd = new Audio('r0.mp3');
+	snd.play();
 }
 
 function prefer(argument)
@@ -151,7 +156,6 @@ function prefer(argument)
 	};
 	request.open('POST', survey_url, true);
 	request.setRequestHeader("Content-Type", "text/plain");
-	var x = [userName, getSampleName(argument), getSampleName(3 - argument), cond].join();
-	console.log(x);
-	request.send(x);
+	document.getElementById("pairno").textContent = pairno + 1;
+	request.send([userName, getSampleName(argument), getSampleName(3 - argument), cond].join());
 }

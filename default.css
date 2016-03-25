@@ -61,7 +61,11 @@ a:hover
 
 button:hover
 {
-	cursor: hand;
+	cursor: pointer;
+}
+button:hover:disabled
+{
+	cursor: not-allowed;
 }
 
 /*********************************************************************************/
@@ -359,7 +363,7 @@ ul.contact li a.icon-rss:before
 .button:hover
 {
 	background: #86bd3b;
-	cursor: hand;
+	cursor: pointer;
 }
 
 .button:active
@@ -383,10 +387,14 @@ ul.contact li a.icon-rss:before
 	margin-bottom: 2em;
 }
 
+.play:disabled {
+	background: url(images/play_button_pale_min.png);	
+}
 
-.play:hover
+
+.play:hover:not(:disabled)
 {
-	cursor: hand;
+	cursor: pointer;
 	background: url(images/play_button_hover_min.png);
 }
 
@@ -410,7 +418,11 @@ ul.contact li a.icon-rss:before
     border: none;
 }
 
-.prefer:hover,
+.prefer:disabled {
+	background: #CDC7BB;
+}
+
+.prefer:hover:not(:disabled),
 .start:hover
 {
 	background: #2b2b2b;
@@ -660,7 +672,7 @@ ul.contact li a.icon-rss:before
 {
 	margin-top: 2em;
 	background: none;
-	cursor: hand;
+	cursor: pointer;
 }
 
 #banner strong
