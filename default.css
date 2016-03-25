@@ -132,6 +132,28 @@ input[type=text], select
     border-radius: 4px;
 }
 
+.progress {
+  margin: 5px 0 3px;
+  border: 6px solid #333;
+  background: #333;
+  overflow: hidden;
+
+  box-shadow: 1px 1px 1px #777;
+  -moz-box-shadow: 1px 1px 1px #777;
+  -webkit-box-shadow: 1px 1px 1px #777;
+}
+.progress > span {
+  display: block;
+  height: 20px;
+  width: 6.66%;
+  color: #FFF;
+  background-color: #FFF;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
+
+
 /*********************************************************************************/
 /* List Styles                                                                   */
 /*********************************************************************************/
