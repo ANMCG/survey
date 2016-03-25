@@ -151,7 +151,6 @@ function prefer(argument)
 	};
 	request.open('POST', survey_url, true);
 	request.setRequestHeader("Content-Type", "text/plain");
-	var x = [userName, getSampleName(argument), getSampleName(3 - argument), cond].join();
-	console.log(x);
-	request.send(x);
+	document.getElementById("pairno").textContent = pairno + 1;
+	request.send([userName, getSampleName(argument), getSampleName(3 - argument), cond].join());
 }
