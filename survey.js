@@ -83,8 +83,15 @@ var getModeName = function(argument) {
 function newChoices()
 {
 	if (pairno == 15) {
-		//TODO: DONE! redirect etc
+		location.pathname = "/done.html";
+		return;
 	}
+	if (pairno > 1) {
+		var s = document.getElementsByClassName("container")[0].style;
+		s.animationName = '';
+		s.animationName = 'nextQuestion';
+	}
+
 	cond = cond_order[pairno];
 	randomLeft = randomBool();
 	choice1 = melodies_order[getModeName(1)].pop();
@@ -118,9 +125,9 @@ var disableButtons = function()
 };
 
 function listen(argument, callback) {
-	var snd = new Audio(getSampleName(argument) + '.mid');
+	var snd = new Audio(getSampleName(argument) + '.wav');
 	snd.play();
-	var playingFlag = document.querySelector(".c" + argument + " .playing");
+	var playingFlag = document.querySelector(".ebox" + argument + " .playing");
 	setTimeout(function() {
 		enableButtons();
 		playingFlag.style.visibility = "hidden";
@@ -143,6 +150,8 @@ function prefer(argument)
 	    }
 	};
 	request.open('POST', survey_url, true);
-	request.setRequestHeader("Content-Type", "text/plain")
-	request.send([userName, getSampleName(argument), getSampleName(3 - argument), cond].join());
+	request.setRequestHeader("Content-Type", "text/plain");
+	var x = [userName, getSampleName(argument), getSampleName(3 - argument), cond].join();
+	console.log(x);
+	request.send(x);
 }

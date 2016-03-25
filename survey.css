@@ -16,6 +16,9 @@ header {
 .container {
 	width: 100%;
 	display: flex;
+	animation-duration: 500ms;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in-out;
 }
 
 .outside {
@@ -28,4 +31,26 @@ header {
 
 .column {
 	display: inline-block;
+}
+
+@keyframes nextQuestion {
+  0% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+
+  49% {
+  	transform: translate(-50%, 0);
+    opacity: 0;
+  }
+
+  51% {
+  	transform: translate(50%, 0);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
 }

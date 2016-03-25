@@ -20,6 +20,8 @@ Released   : 20131202
 <link href="default.css" rel="stylesheet" type="text/css" media="all" />
 <link href="fonts.css" rel="stylesheet" type="text/css" media="all" />
 
+<script src="survey.js"></script>
+
 <!--[if IE 6]><link href="default_ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
 
 </head>
@@ -82,47 +84,23 @@ Released   : 20131202
 							<p>Please select your <b>nationality</b>.</p>
 							<input id="usernameinput" type="hidden" name="username"></input>
 							<script>document.getElementById("usernameinput").value = userName;</script>
-							<select name="nationality">
-								<option>Dutch
-								<option>Belgian
-								<option>German
-								<option>Turkish
-								<option>Other
-							</select>
+							<input name="nationality">
 							<p>Please select your <b>age</b></p>
-							<select name="nationality">
-								<option>20
-								<option>21
-								<option>22
-								<option>23
-								<option>24
-								<option>.....
-							</select>
+							<input name="age">
 							<p>Please select your <b>gender</b></p>
-							<select name="nationality">
+							<select name="gender">
 								<option>Female
 								<option>Male
 								<option>Other
 							</select>
 							<p>How many years of <b>musical training</b> do you have?</p>
-							<select name="nationality">
-								<option>0
-								<option>1
-								<option>2
-								<option>3
-								<option>4
-								<option>5
-								<option>6
-								<option>7
-								<option>8
-								<option>9
-								<option>10
-							</select>
-						</form>
+
+							<input name="musicaltraining">
 
 				<h1>If you are ready!</h1>
+				<input type="submit" class="start" value="Start The Survey">
 
-				<a href="survey.html" class="start">Start The Survey</a>
+						</form>
 
 
 		</div>
