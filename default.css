@@ -1153,6 +1153,7 @@ ul.contact li a.icon-rss:before
 
 .playing {
     visibility: hidden;
+    font-size: 4em;
 }
 
 
