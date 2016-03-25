@@ -114,10 +114,6 @@ button:hover:disabled
 	text-align: center;
 }
 
-option
-{
-	font-size: 2em;
-}
 
 #featured h1
 {
@@ -127,14 +123,13 @@ option
 
 input[type=text], select 
 {
-    width: 10em;
+    width: 11em;
     padding: 0px 10px;
     margin: 1px 0;
-    margin-bottom: 2em;
+    margin-bottom: 5em;
     display: inline-block;
     border: 1px solid #ccc;
     border-radius: 4px;
-    font-size: 13px;
 }
 
 /*********************************************************************************/

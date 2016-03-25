@@ -81,7 +81,7 @@ Released   : 20131202
 					<h1>Before you start...</h1>
 
 						<form action="/post/nationality" method=POST>
-							<p>Please select your <b>country</b>.</p>
+							<p>Please select your <b>country</b>;</p>
 							<input id="usernameinput" type="hidden" name="username"></input>
 							<script>document.getElementById("usernameinput").value = userName;</script>
 							<select name="nationality">
@@ -101,18 +101,21 @@ Released   : 20131202
 								<option>Slovenia
 								<option>Other
 							</select>
-							<p>Please select your <b>age</b></p>
-							<input name="age">
-							<p>Please select your <b>gender</b></p>
+							<br>
+							<p>Please select your <b>age</b>;</p>
+							<input type="text" name="age">
+							<br>
+							<p>Please select your <b>gender</b>;</p>
 							<select name="gender">
 								<option>Female
 								<option>Male
 								<option>Other
 							</select>
+							<br>
 							<p>How many years of <b>musical training</b> do you have?</p>
 
-							<input name="musicaltraining">
-
+							<input  type="text"  name="musicaltraining">
+				<br><br>
 				<h1>If you are ready!</h1>
 				<input type="submit" class="start" value="Start The Survey">
 
