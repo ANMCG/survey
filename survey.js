@@ -138,7 +138,7 @@ function listen(argument, callback) {
 	setTimeout(function() {
 		playingFlag.style.visibility = "hidden";
 		if (callback) {
-			setTimeout(callback, 500);
+			setTimeout(callback, 750);
 		} else {
 			document.getElementsByTagName("h2")[0].textContent = "Which of these melodies do you prefer?";
 			enableButtons();

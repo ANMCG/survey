@@ -39,36 +39,36 @@ for entry in db.prefer.find():
 complete = set()
 
 for key, value in total_trials.iteritems():
-	if value == completed_trial:
-		complete.add(value)
+	if value == completed_trial or True:
+		complete.add(key)
 
 for entry in db.prefer.find():
-	if entry['user'] in complete:
+	if entry['user'] in complete or True:
 		details_csv.append([entry['user'], entry['prefer'], entry['over']])
 details_csv.sort()
 
 for u, p in aggregate.iteritems():
-	if u in complete:
+	if u in complete or True:
 		for cond, counts in enumerate(p):
 			aggregate_csv.append([u, cond] + counts)
 
 print'<p>', len(complete), "surveys completed"
 print'<p>', len(aggregate), "surveys started"
-print'<p><a href="o/aggregate.csv">aggregate</a>'
-print'<p><a href="o/details.csv">details</a>'
-print'<p><a href="o/participants.csv">participants</a>'
+print'<p><a href="../o/aggregate.csv">aggregate</a>'
+print'<p><a href="../o/details.csv">details</a>'
+print'<p><a href="../o/participants.csv">participants</a>'
 
 for entry in db.nationality.find():
 	if entry['user'] in complete:
 		participants_csv.append([entry['user'], entry['age'], entry['nationality'], entry['musicaltraining'], entry['gender']])
 		complete.pop(entry['user'])
 
-with open('o/aggregate.csv', 'wb') as f:
+with open('../o/aggregate.csv', 'wb') as f:
 	csv.writer(f).writerows(aggregate_csv)
 
-with open('o/details.csv', 'wb') as f:
+with open('../o/details.csv', 'wb') as f:
 	csv.writer(f).writerows(details_csv)
 
-with open('o/participants.csv', 'wb') as f:
+with open('../o/participants.csv', 'wb') as f:
 	csv.writer(f).writerows(participants_csv)
 
