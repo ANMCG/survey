@@ -64,11 +64,11 @@ var genName = function()
 
 function newName()
 {
-	userName = localStorage.userName = genName();
+	userName = sessionStorage.userName = genName();
 }
 
 if (localStorage.userName) {
-	userName = localStorage.userName;
+	userName = sessionStorage.userName;
 } else {
 	newName();
 }

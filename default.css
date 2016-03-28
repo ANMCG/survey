@@ -59,7 +59,7 @@ a:hover
 	width: 1200px;
 }
 
-button:hover
+button:hover, input.start:hover
 {
 	cursor: pointer;
 }
