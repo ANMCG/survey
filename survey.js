@@ -67,7 +67,7 @@ function newName()
 	userName = sessionStorage.userName = genName();
 }
 
-if (localStorage.userName) {
+if (sessionStorage.userName) {
 	userName = sessionStorage.userName;
 } else {
 	newName();
