@@ -56,7 +56,7 @@ a:hover
 .container
 {
 	margin: 0px auto;
-	width: 1200px;
+	width: 90%;
 }
 
 button:hover, input.start:hover
@@ -655,7 +655,7 @@ ul.contact li a.icon-rss:before
 #banner
 {
 	overflow: hidden;
-	width: 1000px;
+	width: 70%;
 	text-align: center;
 	color: rgba(255,255,255,1);
 	background-color:rgba(0,0,0,0.7);
@@ -794,7 +794,7 @@ ul.contact li a.icon-rss:before
 	letter-spacing: 0.20em;
 	text-align: center;
 	text-transform: uppercase;
-	font-size: 0.80em;
+	font-size: 0.50em;
 	color: rgba(255,255,255,0.3);
 }
 
@@ -806,8 +806,8 @@ ul.contact li a.icon-rss:before
 
 #copyright img
 {
-	width:300px; 
-	margin-left: 38%;
+	width: 25%;
+	padding: 0 37.5%;
 }
 
 
@@ -1124,7 +1124,7 @@ ul.contact li a.icon-rss:before
 .extra2 .ebox1,
 .extra2 .ebox2
 {
-	width: 560px;
+	width: 46%;
 }
 
 .extra2  .ebox1
