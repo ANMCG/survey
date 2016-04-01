@@ -12,7 +12,8 @@ body
 	font-family: 'Source Sans Pro', sans-serif;
 	font-size: 11pt;
 	font-weight: 300;
-	color: #6c6c6c
+	color: #6c6c6c;
+
 }
 
 h1, h2, h3
@@ -56,7 +57,7 @@ a:hover
 .container
 {
 	margin: 0px auto;
-	width: 1200px;
+	width: 90%;
 }
 
 button:hover, input.start:hover
@@ -112,6 +113,7 @@ button:hover:disabled
 {
 	font-size: 1.3em;
 	text-align: center;
+	padding: 0 10%;
 }
 
 
@@ -632,18 +634,22 @@ ul.contact li a.icon-rss:before
 
 	#about #header-featured
 	{
-		padding: 10em 0em;
 		background-image: url(images/bannerno.jpg);
-		background-position: center;
-		background-size: cover;
+	}
+
+	#theend #header-featured
+	{
+		background-image: url(images/banner2.jpg);
 	}
 
 	#thanks #header-featured
 	{
-		padding: 10em 0em;
 		background-image: url(images/banner9.jpg);
-		background-position: center;
-		background-size: cover;
+	}
+
+	#results #header-featured
+	{
+		background-image: url(images/banner2.jpg);
 	}
 
 
@@ -655,7 +661,7 @@ ul.contact li a.icon-rss:before
 #banner
 {
 	overflow: hidden;
-	width: 1000px;
+	width: 70%;
 	text-align: center;
 	color: rgba(255,255,255,1);
 	background-color:rgba(0,0,0,0.7);
@@ -791,10 +797,10 @@ ul.contact li a.icon-rss:before
 #copyright p
 {
 	margin-top:2em;
-	letter-spacing: 0.20em;
+	letter-spacing: 0.2em;
 	text-align: center;
 	text-transform: uppercase;
-	font-size: 0.80em;
+	font-size: 0.5em;
 	color: rgba(255,255,255,0.3);
 }
 
@@ -806,8 +812,8 @@ ul.contact li a.icon-rss:before
 
 #copyright img
 {
-	width:300px; 
-	margin-left: 38%;
+	width: 25%;
+	padding: 0 37.5%;
 }
 
 
@@ -1124,7 +1130,7 @@ ul.contact li a.icon-rss:before
 .extra2 .ebox1,
 .extra2 .ebox2
 {
-	width: 560px;
+	width: 46%;
 }
 
 .extra2  .ebox1

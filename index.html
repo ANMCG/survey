@@ -30,101 +30,34 @@ Released   : 20131202
 	<div id="header" class="container">
 		<div id="logo">
 			<!--h1><span class="fa fa-bolt"></span><a href="#">LawnLike</a></h1-->
-			<h1><span class="fa fa-music"></span><a href="#">MusicStudy.nl</a></h1>
+			<h1><span class="fa fa-music"></span><a href="index.html">MusicStudy.nl</a></h1>
 		</div>
 		<div id="menu">
 			<ul>
-				<li class="current_page_item"><a href="#" accesskey="1" title="">Survey</a></li>
-				<li><a href="about.html" accesskey="2" title="">About Us</a></li>
+				<li class="current_page_item"><a href="index.html" accesskey="1" title="">Home Page</a></li>
+				<li><a href="dummy.html" accesskey="2" title="">Survey</a></li>
+				<li><a href="results.html" accesskey="2" title="">Results</a></li>
+				<li><a href="about.html" accesskey="3" title="">About Us</a></li>
 			</ul>
 		</div>
 	</div>
 </div>
 
+<!--div id="theend"-->
 <div id="header-featured">
 	<div id="banner-wrapper">
 		<div id="banner" class="container">
 			<h2>Welcome to Our Survey</h2>
-			<p>Thank you for your interest in our survey! In this survey, we study your evaluation of 
+			<p>Thank you for your interest in our survey! In this survey, we studied your evaluation of 
 				artificial music. We have used different methods to create artificial melodies. To know which 
-				method works best, we need your opinion on the melodies. Participating in this survey takes 
-				about 10 minutes.</p>
-			<a href="#wrapper" class="fa fa-chevron-down"></a>
+				method works best.</p>
+				<p>However, our research has been completed. Therefore, we do not collect data anymore, since 4th April 2016. If you are still curious about what we have done, a dummy version is still online on "<a style='text-decoration: none; color:#FFF; font-weight: bold;' href="dummy.html">Survey</a>"</p>
+			<!--a href="#wrapper" class="fa fa-chevron-down"></a-->
 		</div>
 	</div>
 </div>
+<!--/div-->
 
-<div id="wrapper" name="exp">
-	<div id="featured-wrapper">
-		<div id="featured" class="extra2 margin-btm container">
-
-
-
-			<div class="main-title">
-				<h2>In this survey,</h2>
-				<span class="byline"></span> 
-			</div>
-
-				<p>You will compare pairs of melodies. For each pair, we ask you to indicate which 
-					one you <b>prefer</b>. After you have given your 
-					preferences, the next pair of melodies will be played. If, for some reason, you did not hear 
-					a melody correctly, you can press the play button to listen to it again. However, you do not 
-					have to listen to melodies multiple times. Just go for your gut feelings when evaluating 
-					them.</p>
-
-					<button class="play" onclick="listenSample()"></button>
-
-				<p>Press the play button above to listen to an example melody. All melodies will be as loud as 
-					this one. Please check whether you can hear the melody and change your speaker loudness 
-					accordingly. You can play the melody multiple times.</p>
-
-					<h1>Before you start...</h1>
-
-						<form action="/post/nationality" method=POST>
-							<p>Please select your <b>country</b>;</p>
-							<input id="usernameinput" type="hidden" name="username"></input>
-							<script>document.getElementById("usernameinput").value = userName;</script>
-							<select required name="nationality">
-								<option>Netherlands
-								<option>Belgium
-								<option>Germany
-								<option>Turkey
-								<option>Brazil
-								<option>Poland
-								<option>Spain
-								<option>Russia
-								<option>Ireland
-								<option>Japan
-								<option>China
-								<option>Austria
-								<option>France
-								<option>Slovenia
-								<option>Other
-							</select>
-							<br>
-							<p>Please fill in your <b>age</b>;</p>
-							<input required type="text" name="age">
-							<br>
-							<p>Please select your <b>gender</b>;</p>
-							<select required name="gender">
-								<option>Female
-								<option>Male
-								<option>Other
-							</select>
-							<br>
-							<p>How many years of <b>musical training</b> do you have?</p>
-
-							<input required type="text" name="musicaltraining">
-				<br><br>
-				<h1>If you are ready!</h1>
-				<input type="submit" class="start" value="Start The Survey">
-
-						</form>
-
-
-		</div>
-	</div>
-</div>
 <div id="copyright" class="container">
 	<!--h1><a href="http://www.ru.nl/english/education/masters/artificial/">MSc. Artificial Intelligence</a></h1-->
 	<img src="images/ru.png">
