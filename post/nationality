@@ -7,7 +7,7 @@ from pymongo import MongoClient
 
 form = cgi.FieldStorage()
 
-MongoClient().musicstudy.nationality.insert_one({'user': form['username'].value, 'nationality': form['nationality'].value, 'age': form['age'].value, 'gender': form['gender'].value, 'musicaltraining': form['musicaltraining'].value})
+#MongoClient().musicstudy.nationality.insert_one({'user': form['username'].value, 'nationality': form['nationality'].value, 'age': form['age'].value, 'gender': form['gender'].value, 'musicaltraining': form['musicaltraining'].value})
 
 print("Refresh: 0; /survey.html")
 print("Content-Type: text/plain")
