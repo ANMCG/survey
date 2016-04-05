@@ -158,6 +158,24 @@ function listenSample() {
 	}, 4000);
 }
 
+function listenBest() {
+	var snd = new Audio('gf7.mp3');
+	snd.play();
+	disableButtons();
+	setTimeout(function() {
+		enableButtons();
+	}, 4000);
+}
+
+function listenWorst() {
+	var snd = new Audio('r8.mp3');
+	snd.play();
+	disableButtons();
+	setTimeout(function() {
+		enableButtons();
+	}, 4000);
+}
+
 function prefer(argument)
 {
 	disableButtons();
