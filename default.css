@@ -1164,4 +1164,12 @@ ul.contact li a.icon-rss:before
     font-size: 4em;
 }
 
+#banner a.bannerlink {
+	text-decoration: none;
+	color: #fff;
+	font-weight: bold;
+}
 
+#banner a.bannerlink:hover {
+	text-decoration: underline;
+}
